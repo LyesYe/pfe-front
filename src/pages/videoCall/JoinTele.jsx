@@ -3,6 +3,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./JoinTele.css";
+
+const link = "https://pfe-back-ye.herokuapp.com/";
+
 const JoinTele = () => {
   const history = useNavigate();
 
@@ -25,7 +28,7 @@ const JoinTele = () => {
 
   const sendRequest = async () => {
     const res2 = await axios
-      .get(`http://localhost:3001/sceance/${code}`, {
+      .get(`${link}sceance/${code}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

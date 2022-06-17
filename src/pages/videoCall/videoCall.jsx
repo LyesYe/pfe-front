@@ -16,6 +16,9 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { SocketContext } from "../../Context";
 
+
+const link = "https://pfe-back-ye.herokuapp.com/";
+
 const App = () => {
 
 
@@ -61,7 +64,7 @@ const App = () => {
     console.log("submit Sceance");
     console.log(values);
     const res2 = await axios
-      .post("http://localhost:3001/sceance/", {
+      .post(`${link}sceance/`, {
         time: values.time,
         date: values.date,
         medecin11: values.medecin11,
@@ -92,7 +95,7 @@ const App = () => {
   useEffect(() => {
     console.log("hi");
     axios
-      .get("http://localhost:3001/specialite/all", {
+      .get(`${link}specialite/all`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -109,7 +112,7 @@ const App = () => {
       });
 
     axios
-      .get("http://localhost:3001/patient/all", {
+      .get(`${link}patient/all`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
