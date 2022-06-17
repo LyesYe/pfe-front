@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+.log{
+    text-align: center;
+    
+}
+.button{
+    opacity: 0.8;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.biggrid{
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 100%;
+    padding: 2rem;
+    margin: 0;
+    
+}
+
+/* .flex{
+    display: flex;
+    flex-direction: column;
+    
+} */
+
+
+span{
+    color: black;
+   
+}
+
+.up{
+    margin-left: 50px;
+    
+    
+}
+
+/* .ConBig{
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    background-color: black;
+} */
+
+
+.picgrid{
+    height: 100vh;
+}
+
+.welcome{
+     font-weight: bold;
+     padding-bottom: 10px;
+}
+
+.login{
+    font-weight: 400;
+    font-size: large;
+}
+
+.no{
+    
+}
+.boxForm{
+    width: 50%;
+}

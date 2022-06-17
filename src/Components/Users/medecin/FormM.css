@@ -1,0 +1,7 @@
+.formo{
+display: flex;
+flex-direction: column;
+}
+.formo .buto{
+    margin: 2rem 0;
+}
