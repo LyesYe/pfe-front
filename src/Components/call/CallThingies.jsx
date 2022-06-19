@@ -31,27 +31,24 @@ const CallThingies = ({ children }) => {
       <form  noValidate autoComplete="off">
         <Grid container >
           <Grid item xs={12} md={6} >
-            <Typography gutterBottom variant="h6">Account Info</Typography>
+            <Typography gutterBottom variant="h6"> Info</Typography>
             <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
-            <div>
-            hiiiiiiiiiiiiiiiiiiiiiic {name}
-            </div>
             <CopyToClipboard text={me} >
               <Button variant="contained" color="primary" fullWidth startIcon={<AssignmentIcon fontSize="large" />}>
-                Copy Your ID
+                Copy le code de la seance
               </Button>
             </CopyToClipboard>
           </Grid>
           <Grid item xs={12} md={6} >
-            <Typography gutterBottom variant="h6">Make a call</Typography>
+            <Typography gutterBottom variant="h6">Se connecter a la seance</Typography>
             <TextField label="ID to call" value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
             {callAccepted && !callEnded ? (
               <Button variant="contained" color="secondary" startIcon={<PhoneDisabledIcon fontSize="large" />} fullWidth onClick={leaveCall} >
-                Hang Up
+                Rcrocher
               </Button>
             ) : (
               <Button variant="contained" color="primary" startIcon={<LocalPhoneIcon fontSize="large" />} fullWidth onClick={() => callUser(idToCall)}>
-                Call
+                Appeler
               </Button>
             )}
           </Grid>
