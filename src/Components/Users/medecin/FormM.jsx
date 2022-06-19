@@ -8,12 +8,25 @@ import "./FormM.css";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function FormM(props) {
+
+  const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+  const link = "https://pfe-back-ye.herokuapp.com/";
   const [values, setValues] = useState({
     lastname: "",
     firstname: "",
     username: "",
     email: "",
-    password: "",
+    password: generateString(6),
     specialiteA: "",
     hopitalA: "",
   });
@@ -22,11 +35,20 @@ function FormM(props) {
   const [sop, setsop] = useState([]);
 
   const sendRequest = async () => {
-    const newP = { password: "13102001" };
-    setValues(newP);
+
+    console.log(values.email);
+    console.log(values.password);
+    const res2 =  axios
+      .post(`http://localhost:3001/send_mail`, {
+        password: values.password,
+        email:values.email
+      })
+      .catch((err) => console.log(err));
+
+
     const isResp = '0';
     const res = await axios
-      .post("http://localhost:3001/med/", {
+      .post(`${link}med/`, {
         email: values.email,
         username: values.username,
         firstname: values.firstname,

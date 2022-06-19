@@ -57,7 +57,7 @@ const App = () => {
   const sendRequest = async () => {
     // console.log(medecin22);
     setValues({ ...values, time: "13h" });
-    setValues({ ...values, code: "abcde" });
+    // setValues({ ...values, code: "abcde" });
     setValues({ ...values, medecin11: localStorage.getItem("username") });
     // setValues({ ...values, medecin22: medecin22 });
 
@@ -85,7 +85,7 @@ const App = () => {
 
     if (res2.status == 201) {
       alert("session success");
-      history("/Teleconsulation");
+      history("/finalCall");
     } else {
       alert("Please check ");
     }

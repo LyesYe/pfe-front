@@ -31,7 +31,7 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   const answerCall = () => {
-    setCallAccepted(true);
+    setCallAccepted(true);  
 
     const peer = new Peer({ initiator: false, trickle: false, stream });
 

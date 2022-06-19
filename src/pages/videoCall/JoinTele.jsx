@@ -55,6 +55,7 @@ const JoinTele = () => {
 
       if (data2.date == today) {
         alert("session joined");
+        
         history("/FinalCall");
       } else {
         alert("wrong date");
